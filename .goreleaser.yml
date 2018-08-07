@@ -23,5 +23,4 @@ changelog:
 release:
   draft: false
   prerelease: true
-  name_template: "{{.ProjectName}}-v{{.Version}} {{.Env.USER}}"
   disable: false
