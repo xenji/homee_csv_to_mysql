@@ -130,6 +130,10 @@ func recordsToSQL(tableName string, allRecords [][]string) string {
 	values := make([]string, len(allRecords))
 
 	for i, row := range allRecords {
+		if len(row) != 2 {
+			log.Printf("found invalid record %+v, skipping", row)
+			continue
+		}
 		values[i] = fmt.Sprintf("('%s', %s)", row[0], row[1])
 	}
 	return sqlLine + strings.Join(values, ",")
