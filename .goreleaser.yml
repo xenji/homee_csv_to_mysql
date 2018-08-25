@@ -1,20 +1,21 @@
 builds:
-  - ldflags:
-    - -s -w
-  - env:
-    - CGO_ENABLED=0
-  goos:
-    - freebsd
-    - windows
-    - linux
-    - darwin
-  goarch:
-    - amd64
-    - arm
-    - arm64
-  goarm:
-    - 6
-    - 7
+  -
+    ldflags:
+     - -s -w
+    env:
+      - CGO_ENABLED=0
+    goos:
+      - freebsd
+      - windows
+      - linux
+      - darwin
+    goarch:
+      - amd64
+      - arm
+      - arm64
+    goarm:
+      - 6
+      - 7
 archive:
   replacements:
     darwin: Darwin
